@@ -4,5 +4,4 @@
 - View the app: <http://localhost:3000>
 
 Guide
-- Collect the zombies and sort them to the proper place.
-- The more you collect per drop, the more points you will receive!
+- Organize the zombies!

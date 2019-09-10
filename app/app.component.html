@@ -2,9 +2,58 @@
     <h3 class="header">Z o m 5 0</h3>
 </div>
 
-<div class="row" id="fieldContainer">
+<div class="row">
     <div class="col"></div>
-    <div class="col-md-10">
+    <div class="col-md-3">
+        <img src="app/assets/school.png"><br/>
+        <h5>School ({{school.numberContained}})</h5><br/>
+        <div *ngFor="let zombie of school.zombies">
+            {{zombie.name}}
+        </div>
+    </div>
+    <div class="col-md-3">
+        <img src="app/assets/hospital.png"><br/>
+        <h5>Hospital ({{hospital.numberContained}})</h5><br/>
+        <div *ngFor="let zombie of hospital.zombies">
+            {{zombie.name}}
+        </div>
+    </div>
+    <div class="col-md-3">
+        <img src="app/assets/factory.png"><br/>
+        <h5>Factory ({{factory.numberContained}})</h5><br/>
+        <div *ngFor="let zombie of factory.zombies">
+            {{zombie.name}}
+        </div>
     </div>
     <div class="col"></div>
+    <br/>
+</div>
+<div class="row">
+    <div class="col" id="selectionContainer">
+        M O V E :
+        <select class="select" #zombieSelected
+            (change)="zombieSelect(zombieSelected.value)">
+            <option *ngFor="let z of this.city.fromBuilding.zombies">
+                {{z.name}}
+            </option>
+        </select><br/>
+        F R O M :
+        <select class="select" #fromBuild
+            (change)="fromBuildingSelect(fromBuild.value)">
+            <option *ngFor="let b of city.buildings">
+                {{b.name}}
+            </option>
+        </select><br/>
+        T O :
+        <select class="select" #toBuild
+            (change)="toBuildingSelect(toBuild.value)">
+            <option *ngFor="let b of city.buildings">
+                {{b.name}}
+            </option>
+        </select>
+    </div>
+</div>
+
+<div class="text-center">
+    <button type="button" class="btn btn-info" id="moveButton" (click)="move()">M O V E</button>
 </div>

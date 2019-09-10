@@ -1,8 +1,49 @@
 body {
     padding: 50px 0;
+    background-color: #111A1A !important;
+}
+
+.header {
+    color: #fff;
+    text-shadow: 2px 2px #F00;
+    margin-bottom: 50px;
 }
 
 .container {
-    background-image: url('./assets/ground.png');
-    background-repeat: repeat;
+    background-image: url('./assets/skyline.png');
+    background-repeat: repeat-x;
+}
+
+.col-md-3 {
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 217, 47, 0.6);
+    padding: 30px;
+}
+
+.col-md-3 img {
+    width: 85px;
+    height: 85px;
+    margin-bottom: 15px;
+}
+
+#selectionContainer {
+    color: #F00;
+    text-align: center;
+    text-shadow: 2px 2px #000;
+    margin-top: 50px;
+}
+
+.select {
+    margin-left: 15px;
+}
+
+#moveButton {
+    background-color: #F00;
+    margin-top: 30px;
+    font-size: 14px;
+    cursor: pointer !important;
 }

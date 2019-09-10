@@ -1,13 +1,10 @@
-import { Unit } from './unit';
 import { Zombie } from './zombies';
 import { Location } from './locations.enum';
 
-export class Building extends Unit {
+export class Building {
+    name: string;
     type: Location;
-    xCoord: number;
-    yCoord: number;
     _zombiesContained: Array<Zombie>;
-    _numberContained: number = 0;
 
     get zombies(): Array<Zombie> {
         return this._zombiesContained;
@@ -16,29 +13,29 @@ export class Building extends Unit {
         this._zombiesContained = z;
     }
     get numberContained(): number {
-        return this._numberContained;
-    }
-    set numberContained(num:number) {
-        this._numberContained = num;
+        return this._zombiesContained.length;
     }
 }
 
 export class School extends Building {
+    name: string = "School";
     type = Location.school;
 }
 
 export class Hospital extends Building {
+    name: string = "Hospital";
     type = Location.hospital;
 }
 
-export class Warehouse extends Building {
-    type = Location.warehouse;
+export class Factory extends Building {
+    name: string = "Factory";
+    type = Location.factory;
 }
 
-export class Player extends Building {
-    type = Location.backpack;
-}
-
-export class Outside extends Building {
-    type = Location.outside;
+export class City {
+    name: string = "City 17";
+    buildings: Array<Building> = new Array<Building>();
+    fromBuilding: Building;
+    toBuilding: Building;
+    selectedZombie: Zombie;
 }
