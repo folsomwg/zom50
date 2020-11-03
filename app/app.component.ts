@@ -4,7 +4,7 @@ import { School, Hospital, Factory, City, Building } from './models/buildings';
 import { Zombie } from './models/zombies';
 
 @Component({
-    selector: 'zom50',
+    selector: 'zomgular',
     moduleId: module.id,
     templateUrl: './app.component.html',
     providers: [ ZombieService ]

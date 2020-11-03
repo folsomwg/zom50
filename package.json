@@ -1,7 +1,7 @@
 {
-  "name": "zom50",
-  "version": "1.0.1",
-  "description": "zom50",
+  "name": "zomgular",
+  "version": "0.1.1",
+  "description": "zomgular",
   "main": "index.js",
   "scripts": {
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\"",
